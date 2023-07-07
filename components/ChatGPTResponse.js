@@ -19,7 +19,7 @@ const ChatGPTResponse = () => {
             <View style={styles.cardTitleWrapper}>
               <Text style={styles.cardTitleText}>Answer</Text>
             </View>
-            <Text style={styles.chatGPTText}>{chatGPTResponse.answer}</Text>
+            <Text style={styles.chatGPTText}>{chatGPTResponse}</Text>
             <View style={styles.copyButtonWrapper}>
               <TouchableOpacity
                 style={styles.copyButton}

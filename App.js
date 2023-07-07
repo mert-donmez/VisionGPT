@@ -340,7 +340,8 @@ const App = () => {
         }),
       });
       const data = await response.json();
-      setChatGPTResponse(JSON.parse(data.choices[0].message.content));
+      console.log(data.choices[0].message.content)
+      setChatGPTResponse(data.choices[0].message.content);
       
       setLoadingAnswer(false);
     } catch (error) {
@@ -370,10 +371,10 @@ const App = () => {
           Authorization: `Bearer ${secretTokens.openai}`,
         },
         body: JSON.stringify({
-          model: "gpt-3.5-turbo",
+          model: "gpt-4",
           temperature: 1,
           messages: messages,
-          max_tokens: 500,
+          max_tokens: 1000,
           top_p: 1,
         }),
       });
