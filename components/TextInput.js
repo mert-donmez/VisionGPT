@@ -93,7 +93,7 @@ const TextInputSection = ({ navigation }) => {
         }
       }
 
-      previousMessages = previousMessages.slice(-5);
+      //previousMessages = previousMessages.slice(-5);
       startChatWithGPT(previousMessages, currentMessage);
       setBotResponseTime([...botResponseTime, getCurrentTime()]);
       setIsPress(true);
